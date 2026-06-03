@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FINIDI — Fractional CFO Premium Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --black:#060606;
+      --ink:#121212;
+      --smoke:#f3f1ed;
+      --soft:#e9e5dc;
+      --line:rgba(255,255,255,.16);
+      --gold:#caa15b;
+      --gold2:#f0d18b;
+      --muted:#9f9f9f;
+      --white:#fff;
+      --glass:rgba(255,255,255,.08);
+      --shadow:0 30px 100px rgba(0,0,0,.42);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--black);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    .noise{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    .topbar{position:fixed;top:0;left:0;right:0;z-index:40;padding:22px 6vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(22px);background:linear-gradient(180deg,rgba(0,0,0,.78),rgba(0,0,0,.24))}
+    .brand{display:flex;gap:16px;align-items:center}.mark{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;transform:rotate(45deg);background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.02));box-shadow:0 0 40px rgba(202,161,91,.2)}.mark span{transform:rotate(-45deg);font-family:Playfair Display,serif;font-size:18px}.logo{letter-spacing:.42em;font-family:Playfair Display,serif;font-size:24px}.sub{font-size:10px;letter-spacing:.38em;margin-top:3px;color:#bdbdbd}.nav{display:flex;gap:34px;align-items:center;font-size:13px;color:#e8e8e8}.nav a{opacity:.82}.nav a:hover{opacity:1;color:var(--gold2)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:2px;font-weight:700;font-size:13px;border:1px solid rgba(255,255,255,.25);transition:.25s ease;background:rgba(255,255,255,.04)}.btn.gold{border:0;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;box-shadow:0 16px 44px rgba(202,161,91,.24)}.btn:hover{transform:translateY(-2px);box-shadow:0 20px 55px rgba(0,0,0,.25)}
+    .hero{min-height:100vh;position:relative;display:grid;align-items:center;padding:130px 6vw 80px;background:radial-gradient(circle at 20% 25%,rgba(202,161,91,.15),transparent 26%),linear-gradient(90deg,#050505 0%,rgba(5,5,5,.95) 34%,rgba(5,5,5,.56) 58%,rgba(5,5,5,.15) 100%)}
+    .hero:before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=85') center right/cover no-repeat;opacity:.54;filter:grayscale(1) contrast(1.15) brightness(.78);z-index:-2}.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:190px;background:linear-gradient(transparent,#060606)}
+    .gridlines{position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(90deg,#000,transparent 78%)}
+    .hero-content{position:relative;z-index:3;max-width:760px}.eyebrow{color:var(--gold2);letter-spacing:.28em;font-size:12px;font-weight:800;text-transform:uppercase;margin-bottom:22px}.hero h1{font-family:Playfair Display,serif;font-size:clamp(58px,8vw,118px);line-height:.9;margin:0 0 28px;letter-spacing:-.045em}.hero p{font-size:19px;line-height:1.65;color:#d8d8d8;max-width:650px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}.hero-card{position:absolute;right:6vw;bottom:105px;width:430px;background:rgba(9,9,9,.72);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(26px);box-shadow:var(--shadow);padding:26px}.hero-card .label{font-size:11px;color:var(--gold2);letter-spacing:.22em;text-transform:uppercase}.hero-card strong{display:block;font-family:Playfair Display,serif;font-size:33px;margin:12px 0}.meter{height:8px;background:rgba(255,255,255,.1);overflow:hidden;margin:18px 0}.meter span{display:block;height:100%;width:82%;background:linear-gradient(90deg,var(--gold),var(--gold2))}.stats{position:relative;z-index:5;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);background:#0b0b0b}.stat{padding:34px 4vw;text-align:center;border-right:1px solid rgba(255,255,255,.11)}.stat:last-child{border-right:0}.stat b{font-family:Playfair Display,serif;font-size:43px;font-weight:600}.stat span{display:block;color:#b7b7b7;font-size:12px;margin-top:9px;text-transform:uppercase;letter-spacing:.12em}
+    section{padding:110px 6vw}.light{background:linear-gradient(180deg,#f7f5f0,#ebe8df);color:#111}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:46px}.section-head h2{font-family:Playfair Display,serif;font-size:clamp(42px,5vw,76px);line-height:.95;margin:0;letter-spacing:-.04em}.section-head p{max-width:520px;color:#666;line-height:1.7}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}.service{min-height:360px;background:rgba(255,255,255,.68);border:1px solid rgba(0,0,0,.12);padding:32px;position:relative;overflow:hidden;transition:.35s ease}.service:before{content:"";position:absolute;right:-60px;top:-60px;width:170px;height:170px;border:1px solid rgba(202,161,91,.38);border-radius:50%}.service:hover{transform:translateY(-9px);box-shadow:0 28px 80px rgba(0,0,0,.14);background:#fff}.icon{width:58px;height:58px;border:1px solid rgba(202,161,91,.55);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:24px;margin-bottom:38px}.service h3{font-family:Playfair Display,serif;font-size:29px;margin:0 0 18px}.service ul{padding-left:18px;line-height:1.9;color:#333}.service .learn{position:absolute;bottom:30px;color:#a47b3b;font-weight:800;font-size:13px}
+    .split{display:grid;grid-template-columns:1.08fr .92fr;min-height:760px;padding:0}.portrait{background:url('assets/alejandro-payro.jpg') center top/cover;filter:grayscale(.16);min-height:760px;position:relative}.portrait:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),transparent)}.bio{padding:120px 6vw;background:#101010;display:flex;flex-direction:column;justify-content:center}.bio h2{font-family:Playfair Display,serif;font-size:64px;line-height:1;margin:0 0 28px}.bio p{color:#c9c9c9;line-height:1.8;font-size:17px}.creds{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:28px}.cred{border:1px solid rgba(255,255,255,.12);padding:18px;background:rgba(255,255,255,.04)}.cred b{display:block;color:#fff}.cred span{color:#aaa;font-size:13px}
+    .dark{background:radial-gradient(circle at 80% 20%,rgba(202,161,91,.13),transparent 24%),#060606}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}.price{border:1px solid rgba(255,255,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.025));padding:32px;position:relative;min-height:430px}.price.featured{border-color:rgba(202,161,91,.8);transform:translateY(-22px);box-shadow:0 34px 90px rgba(202,161,91,.16)}.badge{position:absolute;top:-18px;left:30px;right:30px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;text-align:center;padding:10px;font-weight:800;font-size:12px}.price h3{font-family:Playfair Display,serif;font-size:34px;margin:14px 0}.amount{font-family:Playfair Display,serif;font-size:56px;margin:18px 0 6px}.amount small{font-family:Inter;font-size:15px;color:#aaa}.price ul{padding-left:20px;color:#d2d2d2;line-height:1.9;margin:28px 0}.price .btn{position:absolute;left:32px;right:32px;bottom:32px}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,0,0,.13);border:1px solid rgba(0,0,0,.12)}.step{background:#f8f6f1;padding:34px;min-height:280px}.step em{font-style:normal;color:var(--gold);font-weight:900;letter-spacing:.2em}.step h3{font-family:Playfair Display,serif;font-size:28px}.step p{color:#555;line-height:1.65}.caseband{display:grid;grid-template-columns:1fr 1fr;gap:30px}.case{padding:34px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06)}.case h3{font-family:Playfair Display,serif;font-size:30px}.case p{color:#c9c9c9;line-height:1.75}.cta{position:relative;overflow:hidden;background:linear-gradient(135deg,#111,#050505);border-top:1px solid rgba(255,255,255,.12)}.cta:before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85') center/cover;opacity:.18;filter:grayscale(1)}.cta .inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}.cta h2{font-family:Playfair Display,serif;font-size:72px;line-height:.95;margin:0}.cta p{color:#cfcfcf;max-width:580px;line-height:1.7}.footer{padding:44px 6vw;background:#030303;border-top:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:30px;color:#aaa}.footer h4{color:#fff;margin:0 0 16px}.footer a,.footer p{display:block;color:#aaa;font-size:13px;margin:9px 0}.mobile-menu{display:none}
+    @media(max-width:1020px){.nav{display:none}.mobile-menu{display:block}.hero-card{position:relative;right:auto;bottom:auto;margin-top:36px}.stats,.cards,.pricing,.process,.caseband,.split,.cta .inner,.footer{grid-template-columns:1fr}.portrait{min-height:520px}.price.featured{transform:none}.section-head{display:block}.hero h1{font-size:64px}}
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#top"><div class="mark"><span>F</span></div><div><div class="logo">FINIDI</div><div class="sub">FRACTIONAL CFO</div></div></a>
+    <nav class="nav"><a href="#services">Services</a><a href="#about">About</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#contact">Contact</a><a class="btn gold" href="#contact">Schedule Consultation</a></nav>
+    <div class="mobile-menu">☰</div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="gridlines"></div>
+      <div class="hero-content">
+        <div class="eyebrow">Strategic CFO Leadership</div>
+        <h1>Financial clarity for growth-driven companies.</h1>
+        <p>Fractional CFO leadership to control cash flow, improve margins, structure capital and make faster, sharper decisions — without the full-time executive cost.</p>
+        <div class="hero-actions"><a class="btn gold" href="#contact">Start the Roadmap</a><a class="btn" href="#services">Explore Services →</a></div>
+      </div>
+      <aside class="hero-card">
+        <div class="label">Finance diagnostic readiness</div>
+        <strong>30-day stabilization sprint</strong>
+        <p style="color:#bbb;line-height:1.6;margin:0">Cash discipline, KPI visibility, cost control, margin focus and board-level decision support.</p>
+        <div class="meter"><span></span></div>
+        <small style="color:#999">Designed for CEOs, owners and PE-backed growth companies.</small>
+      </aside>
+    </section>
+
+    <div class="stats">
+      <div class="stat"><b>20+</b><span>Years Experience</span></div>
+      <div class="stat"><b>$1B+</b><span>Assets Managed</span></div>
+      <div class="stat"><b>$250M+</b><span>M&A Transactions</span></div>
+      <div class="stat"><b>4</b><span>Markets Served</span></div>
+    </div>
+
+    <section id="services" class="light">
+      <div class="section-head"><div><div class="eyebrow">What we do</div><h2>Core Services</h2></div><p>From cash flow control to strategic planning, FINIDI acts as the financial command center your business needs to grow with discipline.</p></div>
+      <div class="cards">
+        <article class="service"><div class="icon">⌖</div><h3>Financial Strategy</h3><ul><li>Strategic planning and execution</li><li>Profitability analysis</li><li>Board-level guidance</li><li>Trusted advisor to leadership</li></ul><a class="learn">Learn more →</a></article>
+        <article class="service"><div class="icon">▥</div><h3>Cash Flow Control</h3><ul><li>52-week cash forecast</li><li>Working capital strategy</li><li>Treasury oversight</li><li>Cost and cash utilization</li></ul><a class="learn">Learn more →</a></article>
+        <article class="service"><div class="icon">↗</div><h3>Growth Facilitation</h3><ul><li>Budgeting and rolling forecast</li><li>M&A and transition support</li><li>Project finance modeling</li><li>Process improvements</li></ul><a class="learn">Learn more →</a></article>
+      </div>
+    </section>
+
+    <section id="about" class="split">
+      <div class="bio">
+        <div class="eyebrow">Who we are</div>
+        <h2>A senior CFO partner you can rely on.</h2>
+        <p>Alejandro Payró brings 20+ years in senior finance roles across banking, private equity, multinational companies and accelerated-growth environments.</p>
+        <p>FINIDI moves companies from basic accounting to sophisticated financial strategy, execution discipline and business support.</p>
+        <div class="creds"><div class="cred"><b>Mechanical Engineer</b><span>ITESM</span></div><div class="cred"><b>MBA</b><span>Kellogg School of Management</span></div><div class="cred"><b>Private Equity</b><span>$1B+ fund management exposure</span></div><div class="cred"><b>Global Markets</b><span>USA · Mexico · LatAm · Europe</span></div></div>
+      </div>
+      <div class="portrait"></div>
+    </section>
+
+    <section id="pricing" class="dark">
+      <div class="section-head"><div><div class="eyebrow">Engagement models</div><h2>Pricing Options</h2></div><p style="color:#aaa">Choose the leadership intensity your company needs: focused support, broad CFO coverage or near full-time strategic integration.</p></div>
+      <div class="pricing">
+        <article class="price"><h3>Starter</h3><div class="amount">$7,000 <small>/ month</small></div><ul><li>Average 10 hours per week</li><li>Two half-days engagement</li><li>Focused CFO areas</li><li>Limited on-site visits</li></ul><a class="btn" href="#contact">Get Started</a></article>
+        <article class="price featured"><div class="badge">Most Popular</div><h3>Growth</h3><div class="amount">$13,000 <small>/ month</small></div><ul><li>Average 20+ hours per week</li><li>Daily engagement flexibility</li><li>Scheduled on-site availability</li><li>Comprehensive CFO coverage</li></ul><a class="btn gold" href="#contact">Get Started</a></article>
+        <article class="price"><h3>Strategic</h3><div class="amount">$18,000 <small>/ month</small></div><ul><li>Average 30+ hours per week</li><li>Daily availability</li><li>Full integration as team member</li><li>Board-level partnership</li></ul><a class="btn" href="#contact">Get Started</a></article>
+      </div>
+    </section>
+
+    <section id="process" class="light">
+      <div class="section-head"><div><div class="eyebrow">How it starts</div><h2>Roadmap Process</h2></div><p>Fast onboarding, immediate financial visibility and a practical execution plan built with your existing team and systems.</p></div>
+      <div class="process">
+        <div class="step"><em>01</em><h3>Kick Off</h3><p>Leadership alignment, priorities, pain points and immediate cash visibility.</p></div>
+        <div class="step"><em>02</em><h3>30-Day Stabilization</h3><p>Cash-flow review, KPI cleanup, reporting discipline and cost control actions.</p></div>
+        <div class="step"><em>03</em><h3>Diagnosis</h3><p>Deep dive into finance processes, talent, controls, margins and forecast quality.</p></div>
+        <div class="step"><em>04</em><h3>Execution</h3><p>Roadmap, governance rhythm and CFO support focused on measurable results.</p></div>
+      </div>
+    </section>
+
+    <section class="dark">
+      <div class="section-head"><div><div class="eyebrow">Proof of value</div><h2>Case Study Direction</h2></div><p style="color:#aaa">The site can later include real stories: turnaround, debt structuring, margin recovery, M&A support and cash-flow discipline.</p></div>
+      <div class="caseband">
+        <div class="case"><h3>Turnaround & Cash Discipline</h3><p>Rapid improvement of financial controls, reporting visibility and working-capital discipline for companies under pressure.</p></div>
+        <div class="case"><h3>Growth & Capital Structure</h3><p>Support for debt facilities, project finance, M&A storytelling and board-level financial leadership.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="inner">
+        <div><div class="eyebrow">Ready to build your financial roadmap?</div><h2>Let’s start a conversation.</h2><p>Schedule a consultation to diagnose how FINIDI can help your company grow with financial clarity, disciplined execution and strategic leadership.</p></div>
+        <a class="btn gold" href="mailto:alejandro@finidicfo.com">Schedule Consultation →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><div class="logo">FINIDI</div><div class="sub">FRACTIONAL CFO</div><p>Strategic CFO leadership for growth-driven companies.</p></div>
+    <div><h4>Services</h4><a>Financial Strategy</a><a>Cash Flow Control</a><a>Growth Facilitation</a></div>
+    <div><h4>Company</h4><a>About</a><a>Pricing</a><a>Case Studies</a></div>
+    <div><h4>Contact</h4><a>alejandro@finidicfo.com</a><a>+52 55 4525 5621</a><a>Mexico City · USA</a></div>
+  </footer>
+</body>
+</html>
