@@ -12,4 +12,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://finidicfo.com/es/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://finidicfo.com/" />
   </url>
+  <url>
+    <loc>https://finidicfo.com/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://finidicfo.com/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://finidicfo.com/es/aviso-de-privacidad/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://finidicfo.com/privacy/" />
+  </url>
+  <url>
+    <loc>https://finidicfo.com/es/aviso-de-privacidad/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://finidicfo.com/privacy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://finidicfo.com/es/aviso-de-privacidad/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://finidicfo.com/privacy/" />
+  </url>
 </urlset>

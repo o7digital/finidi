@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Notice | FINIDI</title>
+  <meta name="description" content="FINIDI privacy notice covering personal data, cookies, California privacy rights, Mexico ARCO rights and GDPR rights." />
+  <link rel="canonical" href="https://finidicfo.com/privacy/" />
+  <link rel="alternate" hreflang="en" href="https://finidicfo.com/privacy/" />
+  <link rel="alternate" hreflang="es" href="https://finidicfo.com/es/aviso-de-privacidad/" />
+  <link rel="alternate" hreflang="x-default" href="https://finidicfo.com/privacy/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--black:#060606;--gold:#caa15b;--gold2:#f0d18b;--text:#e8e8e8;--muted:#aaa;--line:rgba(255,255,255,.14)}
+    *{box-sizing:border-box}
+    body{margin:0;background:#060606;color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .noise{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    .topbar{position:fixed;top:0;left:0;right:0;z-index:40;padding:22px 6vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(22px);background:linear-gradient(180deg,rgba(0,0,0,.78),rgba(0,0,0,.24))}
+    .brand{display:flex;align-items:center}.brand-logo{display:block;width:150px;height:58px;object-fit:cover;object-position:top;filter:invert(1);opacity:.96}.nav{display:flex;gap:34px;align-items:center;font-size:13px;color:#e8e8e8}.nav a{opacity:.82}.nav a:hover{opacity:1;color:var(--gold2)}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:2px;font-weight:700;font-size:13px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.04)}.btn.gold{border:0;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111}.mobile-menu{display:none;width:46px;height:46px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.05);padding:0;align-items:center;justify-content:center;flex-direction:column;gap:6px;cursor:pointer}.mobile-menu span{display:block;width:22px;height:2px;background:#fff;transition:.25s ease}.mobile-menu[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}.mobile-menu[aria-expanded="true"] span:nth-child(2){opacity:0}.mobile-menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+    .legal-hero{padding:170px 6vw 72px;background:radial-gradient(circle at 18% 20%,rgba(202,161,91,.16),transparent 28%),linear-gradient(135deg,#101010,#050505);border-bottom:1px solid var(--line)}
+    .legal-hero .eyebrow{color:var(--gold2);letter-spacing:.28em;font-size:12px;font-weight:800;text-transform:uppercase;margin-bottom:18px}.legal-hero h1{font-family:Playfair Display,serif;font-size:clamp(48px,7vw,92px);line-height:.95;margin:0 0 22px;letter-spacing:-.035em}.legal-hero p{max-width:820px;color:#d8d8d8;font-size:18px;line-height:1.7}
+    .legal{padding:72px 6vw 96px;background:linear-gradient(180deg,#f7f5f0,#ebe8df);color:#111}.legal-inner{max-width:980px;margin:0 auto}.notice{padding:28px;border:1px solid rgba(0,0,0,.14);background:rgba(255,255,255,.62);margin-bottom:34px}.notice p{margin:0;color:#444;line-height:1.75}.legal h2{font-family:Playfair Display,serif;font-size:34px;line-height:1.08;margin:42px 0 16px}.legal h3{font-size:18px;margin:26px 0 10px}.legal p,.legal li{color:#333;line-height:1.75}.legal ul{padding-left:22px}.legal strong{color:#111}.legal a{color:#8a632d;font-weight:700}
+    .footer{padding:44px 6vw;background:#030303;border-top:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:30px;color:#aaa}.footer .brand-logo{width:132px;height:116px;object-fit:contain}.footer h4{color:#fff;margin:0 0 16px}.footer a,.footer p{display:block;color:#aaa;font-size:13px;margin:9px 0}.footer-seo{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:22px;text-align:center;color:#777;font-size:12px;line-height:1.9}
+    @media(max-width:1020px){.topbar{padding:16px 6vw}.nav{position:absolute;top:100%;left:0;right:0;display:grid;gap:0;padding:12px 6vw 22px;background:rgba(3,3,3,.96);border-bottom:1px solid rgba(255,255,255,.12);opacity:0;pointer-events:none;transform:translateY(-12px);transition:.25s ease}.nav.open{opacity:1;pointer-events:auto;transform:translateY(0)}.nav a{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px}.nav a.btn{margin-top:14px;border-bottom:0}.mobile-menu{display:flex}.footer{grid-template-columns:1fr}}
+    @media(max-width:640px){.topbar{padding-left:5vw;padding-right:5vw}.brand-logo{width:118px;height:46px}.legal-hero{padding:128px 5vw 56px}.legal-hero h1{font-size:40px;letter-spacing:0}.legal{padding:52px 5vw 72px}.footer{padding:34px 5vw}.footer .brand-logo{width:132px;height:116px;object-fit:contain}}
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="/"><img class="brand-logo" src="/logo%20(1).png" alt="FINIDI Fractional CFO" width="965" height="850" /></a>
+    <nav class="nav" id="site-nav"><a href="/#services">Services</a><a href="/#about">About</a><a href="/#pricing">Pricing</a><a href="/#process">Process</a><a href="/#contact">Contact</a><a href="/es/aviso-de-privacidad/">ES</a><a class="btn gold" href="/#contact">Schedule Consultation</a></nav>
+    <button class="mobile-menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <div class="eyebrow">FINIDI Privacy Notice</div>
+      <h1>Privacy Notice</h1>
+      <p>This Privacy Notice explains how FINIDI collects, uses, discloses and protects personal information, including information from visitors and prospective clients in California, San Diego, Mexico, the United States and the European Economic Area.</p>
+    </section>
+
+    <section class="legal">
+      <div class="legal-inner">
+        <div class="notice">
+          <p><strong>Last updated:</strong> July 21, 2026. This notice is provided for transparency and does not replace legal advice. If FINIDI's processing activities change, this notice should be reviewed and updated.</p>
+        </div>
+
+        <h2>1. Data Controller</h2>
+        <p>For purposes of applicable privacy laws, the data controller or responsible party is <strong>FINIDI</strong>, a fractional CFO and strategic finance advisory business. Contact: <a href="mailto:alejandro@finidicfo.com">alejandro@finidicfo.com</a>. Phone: +52 55 4525 5621.</p>
+
+        <h2>2. Personal Information We May Collect</h2>
+        <p>FINIDI may collect the following categories of personal information when you visit the website, contact FINIDI, request a consultation or engage services:</p>
+        <ul>
+          <li>Identifiers, such as name, email address, phone number, company name and business role.</li>
+          <li>Professional or business information, such as company size, industry, finance needs and CFO support requirements.</li>
+          <li>Commercial and engagement information, such as communications, consultation requests, proposals and service history.</li>
+          <li>Internet or electronic activity information, such as IP address, browser type, device information, pages viewed, referral source and cookie identifiers.</li>
+          <li>Financial, operational or company information voluntarily provided for a consultation or engagement.</li>
+        </ul>
+
+        <h2>3. Purposes of Processing</h2>
+        <p>FINIDI uses personal information to respond to inquiries, schedule consultations, evaluate potential engagements, provide fractional CFO services, prepare proposals, manage client relationships, improve the website, maintain security, comply with legal obligations and keep appropriate business records.</p>
+
+        <h2>4. Legal Bases Under GDPR</h2>
+        <p>Where the General Data Protection Regulation applies, FINIDI relies on one or more legal bases: consent, performance of a contract or pre-contractual steps, legitimate interests in operating and improving professional services, compliance with legal obligations and, where necessary, the establishment or defense of legal claims.</p>
+
+        <h2>5. Cookies and Similar Technologies</h2>
+        <p>The website may use cookies, pixels or similar technologies to operate the site, understand usage, improve performance and measure marketing effectiveness. Cookies may include:</p>
+        <ul>
+          <li><strong>Essential cookies:</strong> needed for basic site operation and security.</li>
+          <li><strong>Analytics cookies:</strong> used to understand traffic, pages visited and site performance.</li>
+          <li><strong>Marketing cookies:</strong> used only if implemented to measure campaigns or referrals.</li>
+        </ul>
+        <p>You can manage cookies through your browser settings. If a dedicated cookie banner or consent tool is added later, FINIDI will honor the preferences collected through that tool.</p>
+
+        <h2>6. Disclosure and Transfers</h2>
+        <p>FINIDI may share personal information with service providers that support hosting, email, analytics, scheduling, cloud storage, professional operations, legal or accounting support. FINIDI does not sell personal information for money. If personal information is transferred internationally, including between Mexico, the United States and the European Economic Area, FINIDI will use appropriate contractual, organizational and technical safeguards as required by applicable law.</p>
+
+        <h2>7. California Privacy Rights</h2>
+        <p>California residents may have rights under the California Consumer Privacy Act as amended by the California Privacy Rights Act, subject to legal thresholds and exceptions. These may include the right to know/access personal information, request correction, request deletion, opt out of sale or sharing where applicable, limit use of sensitive personal information where applicable and not be discriminated against for exercising privacy rights.</p>
+        <p>FINIDI does not knowingly sell personal information. To exercise California privacy rights, contact <a href="mailto:alejandro@finidicfo.com">alejandro@finidicfo.com</a> with the subject line “California Privacy Request.” FINIDI may need to verify your identity before fulfilling a request.</p>
+
+        <h2>8. Mexico Privacy Rights</h2>
+        <p>Under Mexican privacy law for private parties, individuals may have ARCO rights: access, rectification, cancellation and opposition, as well as the right to revoke consent where applicable. Requests may be sent to <a href="mailto:alejandro@finidicfo.com">alejandro@finidicfo.com</a> with the subject line “ARCO Request.” Please include your name, contact information, the right you wish to exercise and information needed to identify the relevant data.</p>
+
+        <h2>9. European Economic Area and GDPR Rights</h2>
+        <p>If GDPR applies, individuals may have the right to access, rectification, erasure, restriction, portability, objection, withdrawal of consent and the right to lodge a complaint with a competent supervisory authority. Requests may be sent to <a href="mailto:alejandro@finidicfo.com">alejandro@finidicfo.com</a> with the subject line “GDPR Request.”</p>
+
+        <h2>10. Retention</h2>
+        <p>FINIDI retains personal information only for as long as reasonably necessary for the purposes described in this notice, including business, legal, accounting, tax, security and dispute-resolution purposes.</p>
+
+        <h2>11. Security</h2>
+        <p>FINIDI uses reasonable administrative, technical and organizational measures designed to protect personal information. No method of transmission or storage is completely secure, so FINIDI cannot guarantee absolute security.</p>
+
+        <h2>12. Children</h2>
+        <p>FINIDI services are intended for businesses and adults. FINIDI does not knowingly collect personal information from children.</p>
+
+        <h2>13. Changes to This Notice</h2>
+        <p>FINIDI may update this Privacy Notice from time to time. Updates will be posted on this page with a revised effective date.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><img class="brand-logo" src="/logo%20(1).png" alt="FINIDI Fractional CFO" width="965" height="850" /><p>Strategic CFO leadership for growth-driven companies.</p></div>
+    <div><h4>Services</h4><a>Financial Strategy</a><a>Cash Flow Control</a><a>Growth Facilitation</a></div>
+    <div><h4>Company</h4><a href="/">About</a><a href="/#pricing">Pricing</a><a>Case Studies</a><a href="/privacy/">Privacy Notice</a></div>
+    <div><h4>Contact</h4><a href="mailto:alejandro@finidicfo.com">alejandro@finidicfo.com</a><a>+52 55 4525 5621</a><a>Mexico City · USA</a></div>
+    <div class="footer-seo">fractional CFO California · fractional CFO San Diego · fractional CFO services California · fractional CFO services San Diego · outsourced CFO California · outsourced CFO San Diego · part-time CFO California · part-time CFO San Diego · CFO consulting services California · CFO consulting services San Diego · strategic finance consulting California · strategic finance consulting San Diego · cash flow management California · cash flow management San Diego · FP&A consulting California · FP&A consulting San Diego · M&A financial support California · M&A financial support San Diego · capital structure advisory California · capital structure advisory San Diego · private equity CFO support California · private equity CFO support San Diego · CFO for growth companies California · CFO for growth companies San Diego</div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.mobile-menu');
+    const siteNav = document.querySelector('#site-nav');
+    menuButton.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    siteNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  </script>
+</body>
+</html>
